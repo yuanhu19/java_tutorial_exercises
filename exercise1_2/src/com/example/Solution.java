@@ -9,7 +9,7 @@ public class Solution {
 
         int i = scan.nextInt();
 
-        // Write your code here.
+        // the example code here
         double d = scan.nextDouble();
         scan.nextLine();
         String s = scan.nextLine();
