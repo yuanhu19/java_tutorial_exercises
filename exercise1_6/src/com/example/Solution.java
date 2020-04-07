@@ -16,36 +16,32 @@ public class Solution {
 
 
         //save numbers in an array list
-        int d,q,x,y;
 
-        ArrayList[] set = new ArrayList[n];
+        ArrayList<ArrayList<Integer>> rows = new ArrayList<>();
 
         for(int i=0; i<n ; i++){
 
-            d = scan.nextInt();
-            set[i] = new ArrayList();
+            int d = scan.nextInt();
+            ArrayList<Integer> row = new ArrayList<>();
             for(int j =0; j<d; j++){
-                set[i].add(scan.nextInt());
+                row.add(scan.nextInt());
             }
+            rows.add(row);
         }
 
         //answer the queries
-        q = scan.nextInt();
+        int q = scan.nextInt();
 
         for (int i=0; i<q; i++){
-               x = scan.nextInt();
-               y = scan.nextInt();
+              int x = scan.nextInt();
+              int y = scan.nextInt();
 
                try {
-                   System.out.println(set[x - 1].get(y - 1));
+                   System.out.println(rows.get(x - 1).get(y - 1));
                } catch(Exception ex){
                    System.out.println("ERROR!");
                }
         }
-
-
-
-
 
 
 
