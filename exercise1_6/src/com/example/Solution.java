@@ -14,6 +14,8 @@ public class Solution {
 
         int n = scan.nextInt();  //lines
 
+
+        //save numbers in an array list
         int d,q,x,y;
 
         ArrayList[] set = new ArrayList[n];
@@ -27,7 +29,9 @@ public class Solution {
             }
         }
 
+        //answer the queries
         q = scan.nextInt();
+
         for (int i=0; i<q; i++){
                x = scan.nextInt();
                y = scan.nextInt();
