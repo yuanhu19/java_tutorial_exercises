@@ -21,17 +21,25 @@ public class Solution {
 
         String[] byQua = {" o' clock", "quarter past ", "half past ","quarter to "};
 
+
+        int hour = 0;
+
+        if (m<=30) hour = h;
+        else hour = h+1;
+
+
+
         if (m==0) result = byOne[h] + byQua[m];
 
-        else if (m%15 == 0) result = byQua[m/15] + byOne[h];
+        else if (m%15 == 0) result = byQua[m/15] + byOne[hour];
 
-        else if(m<=20) result = byOne[m] + ((m==1)?" minute":" minutes") + " past "+ byOne[h];
+        else if(m<=20) result = byOne[m] + ((m==1)?" minute":" minutes") + " past "+ byOne[hour];
 
-        else if(m<30 && m >20) result = byOne[20]+ " "+ byOne[m-20] + "minutes" + " past "+ byOne[h];
+        else if(m<30 && m >20) result = byOne[20]+ " "+ byOne[m-20] + " minutes" + " past "+ byOne[hour];
 
-        else if(m>30 && m <=40) result = byOne[20]+ " "+ byOne[60-m] + " minutes"+ " to "+ byOne[h+1];
+        else if(m>30 && m <40) result = byOne[20]+ " "+ byOne[60-m] + " minutes"+ " to "+ byOne[hour];
 
-        else result =  byOne[60-m] + ((m==59)?" minute":" minutes") + " to "+ byOne[h+1];
+        else result =  byOne[60-m] + ((m==59)?" minute":" minutes") + " to "+ byOne[hour];
 
 
         return  result;
