@@ -37,7 +37,7 @@ public class Solution {
 
         else if(m<30 && m >20) result = byOne[20]+ " "+ byOne[m-20] + " minutes" + " past "+ byOne[hour];
 
-        else if(m>30 && m <40) result = byOne[20]+ " "+ byOne[60-m] + " minutes"+ " to "+ byOne[hour];
+        else if(m>30 && m <40) result = byOne[20]+ " "+ byOne[40-m] + " minutes"+ " to "+ byOne[hour];
 
         else result =  byOne[60-m] + ((m==59)?" minute":" minutes") + " to "+ byOne[hour];
 
